@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HearingAid — Clinical Solutions</title>
+<meta name="description" content="Smart hearing aids designed with clinical approach — easy to understand, suitable for both professionals and users.">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="HearingAid Logo">
+      <div>
+        <h1>HearingAid</h1>
+        <p class="tagline">Solutions for clear and secure communication</p>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Main Menu">
+      <a href="#overview">Overview</a>
+      <a href="#features">Objectives</a>
+      <a href="#materials">Materials</a>
+      <a href="#evidence">Research</a>
+      <a href="#demo">Demo</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" class="container" role="main">
+  <!-- Overview -->
+  <section id="overview" class="hero">
+    <div class="hero-card">
+      <h2>Communication Strategy</h2>
+      <p class="lead">
+        Most hearing aids are expensive and often sound too noisy. 
+        In daily conversations, users may struggle to hear clearly 
+        due to background noise. Our goal is to design affordable, 
+        clinically tested solutions that improve clarity and comfort 
+        for elderly users and patients with hearing difficulties.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href="#demo">View Demo</a>
+        <a class="btn secondary" href="hearing-aid by group6 elderly.pdf" target="_blank">Download Brochure (PDF)</a>
+      </div>
+    </div>
+    <aside class="aside-card">
+      <h3>Technical Data</h3>
+      <ul>
+        <li>Latency &lt; 120 ms (caption path)</li>
+        <li>Battery life 18–30 hours</li>
+        <li>Bluetooth LE, AAC codec</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- Objectives -->
+  <section id="features" class="section">
+    <h2>Main and Secondary Objectives</h2>
+    <div class="features-grid">
+      <article class="feature-card">
+        <h3>Lower Cost</h3>
+        <p>Develop hearing aids with more affordable components without compromising quality.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Noise Reduction</h3>
+        <p>Implement advanced noise reduction systems for clearer sound.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Focus Mode</h3>
+        <p>Allow users to concentrate on speech and filter distracting sounds.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Clinical Testing</h3>
+        <p>Perform clinical trials to ensure effectiveness and user safety.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Ease of Use</h3>
+        <p>Design an intuitive interface and seamless connectivity.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Materials -->
+  <section id="materials" class="section">
+    <h2>Materials Used in Device</h2>
+    <div class="features-grid">
+      <article class="feature-card">
+        <img src="https://m.media-amazon.com/images/I/71H2xAHaBRL._UF1000,1000_QL80_.jpg" alt="DSP (Digital Signal Processor)" style="width:100%; height:auto; border-radius:8px; margin-bottom:8px;">
+
+        <h3>PAM8403</h3>
+        <p>Soft ear tips for comfort and long-term wearability.</p>
+      </article>
+      <article class="feature-card">
+        <img src="https://kiwidynamics.in/wp-content/uploads/2024/11/ESP8266Node-MCU_B2.jpg" alt="DSP (Digital Signal Processor)" style="width:100%; height:auto; border-radius:8px; margin-bottom:8px;">
+
+        <h3>ESP 8266</h3>
+        <p>Durable housing that reduces device weight.</p>
+      </article>
+      <article class="feature-card">
+        <img src="https://www.flyrobo.in/image/cache/catalog/product2/microphone-sound-sensor-module-voice-sensor-high-sensitivity-sound-detection-module-whistle-module-1024x1024.JPG" alt="DSP (Digital Signal Processor)" style="width:100%; height:auto; border-radius:8px; margin-bottom:8px;">
+
+        <h3>Mic sound sensor module</h3>
+        <p>Provides 18–30 hours of continuous use.</p>
+      </article>
+      <article class="feature-card">
+        <img src="https://cdn.taoglas.com/wp-content/uploads/2022/10/SPKM.10.8.A_Web-600x600.png" alt="DSP (Digital Signal Processor)" style="width:100%; height:auto; border-radius:8px; margin-bottom:8px;">
+
+        <h3>10mm Speaker</h3>
+        <p>Captures voice with high accuracy while reducing ambient noise.</p>
+      </article>
+      <article class="feature-card">
+        <img src="https://www.elprocus.com/wp-content/uploads/Buzzer-Pin-Configuration-272x300.jpg" alt="DSP (Digital Signal Processor)" style="width:100%; height:auto; border-radius:8px; margin-bottom:8px;">
+
+        <h3>Buzzer</h3>
+        <p>Handles noise reduction, focus mode, and audio clarity in real time.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="evidence" class="section">
+    <h2>Background and Justification</h2>
+    <div class="card">
+      <p>
+        Hearing loss affects communication, independence, and quality of life. 
+        While commercial hearing aids exist, their high cost and noisy output 
+        limit adoption among elderly patients. A clinically guided approach 
+        can ensure better accessibility and user satisfaction.
+      </p>
+      <p>Professional fitting and clinical validation are strongly recommended.</p>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="section">
+    <h2>Demo Application</h2>
+    <div class="demo-grid">
+      <div class="card">
+        <label for="upload-audio"><strong>Upload Audio File (mp3/wav)</strong></label><br/>
+        <input id="upload-audio" type="file" accept="audio/*"/>
+        <div id="audio-name" class="meta">No file selected</div>
+        <div class="waveform">Audio waveform (example)</div>
+        <div style="margin-top:12px">
+          <button id="simulate-caption" class="btn">Simulate Caption</button>
+          <div id="caption-status" class="meta">No transcript yet</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Transcript</h3>
+        <div id="transcript" class="transcript">
+          Here, background noise often makes conversations unclear. 
+          This demo simulates how captions can help users follow speech more easily.
+        </div>
+        <p class="note">For real use, please connect a Speech-to-Text API and patient data system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact / Clinical Trial Request</h2>
+    <div class="card">
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="field"><label for="c-name">Full Name</label><input id="c-name" required></div>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" required></div>
+        </div>
+        <div style="margin-top:12px">
+          <label for="c-msg">Message / Organization</label><br/>
+          <textarea id="c-msg" rows="4"></textarea>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+          <button type="submit" class="btn">Send Request</button>
+          <div id="contact-status" class="meta"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="section">
+    <div class="card">
+      <h3>Privacy Policy</h3>
+      <p class="meta">Collected data is only used for communication and clinical trial purposes. We comply with personal data protection regulations.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Smart Hearing Aid — Developed by TEAM6: ELDERLY</p>
+    <p class="meta">For partnership inquiries: phutthiphong.n@kkumail.com</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
