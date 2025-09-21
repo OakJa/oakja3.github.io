@@ -1,66 +1,36 @@
-// ========== Audio Upload ==========
-const uploadInput = document.getElementById("upload-audio");
-const audioName = document.getElementById("audio-name");
-const waveformDiv = document.querySelector(".waveform");
-const simulateBtn = document.getElementById("simulate-caption");
-const captionStatus = document.getElementById("caption-status");
-const transcriptBox = document.getElementById("transcript");
+// Left Ear Volume
+const leftEar = document.getElementById("left-ear");
+const leftEarValue = document.getElementById("left-ear-value");
+const previewLeft = document.getElementById("preview-left");
 
-// เมื่อเลือกไฟล์ audio
-uploadInput.addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if (file) {
-    audioName.textContent = `Selected: ${file.name}`;
-    drawFakeWaveform();
-  } else {
-    audioName.textContent = "No file selected";
-    waveformDiv.innerHTML = "Audio waveform (example)";
-  }
+leftEar.addEventListener("input", () => {
+  leftEarValue.textContent = leftEar.value;
+  previewLeft.textContent = leftEar.value + "%";
 });
 
-// วาด waveform จำลอง
-function drawFakeWaveform() {
-  waveformDiv.innerHTML = "";
-  const canvas = document.createElement("canvas");
-  canvas.width = waveformDiv.clientWidth || 300;
-  canvas.height = 80;
-  waveformDiv.appendChild(canvas);
+// Right Ear Volume
+const rightEar = document.getElementById("right-ear");
+const rightEarValue = document.getElementById("right-ear-value");
+const previewRight = document.getElementById("preview-right");
 
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = "#1e90ff";
-  for (let i = 0; i < canvas.width; i += 4) {
-    const h = Math.random() * canvas.height;
-    ctx.fillRect(i, (canvas.height - h) / 2, 2, h);
-  }
-}
-
-// ========== Simulate Caption ==========
-simulateBtn.addEventListener("click", () => {
-  captionStatus.textContent = "Processing audio...";
-  captionStatus.style.color = "#ff9900";
-
-  setTimeout(() => {
-    captionStatus.textContent = "Transcript generated ✅";
-    captionStatus.style.color = "green";
-
-    transcriptBox.textContent =
-      "Transcript (demo): Hello everyone, thank you for joining us today. " +
-      "This demo shows how captions can help users with hearing difficulties follow conversations clearly.";
-  }, 2000);
+rightEar.addEventListener("input", () => {
+  rightEarValue.textContent = rightEar.value;
+  previewRight.textContent = rightEar.value + "%";
 });
 
-// ========== Contact Form ==========
-const contactForm = document.getElementById("contact-form");
-const contactStatus = document.getElementById("contact-status");
+// Frequency Adjustment
+const freq = document.getElementById("frequency");
+const freqValue = document.getElementById("frequency-value");
+const previewFreq = document.getElementById("preview-frequency");
 
-contactForm.addEventListener("submit", (e) => {
+freq.addEventListener("input", () => {
+  freqValue.textContent = freq.value;
+  previewFreq.textContent = freq.value + " Hz";
+});
+
+// Contact form (คงไว้เหมือนเดิม)
+document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
-  contactStatus.textContent = "Sending...";
-  contactStatus.style.color = "#ff9900";
-
-  setTimeout(() => {
-    contactStatus.textContent = "Request sent successfully ✅";
-    contactStatus.style.color = "green";
-    contactForm.reset();
-  }, 1500);
+  document.getElementById("contact-status").textContent =
+    "Your request has been sent. Thank you!";
 });
